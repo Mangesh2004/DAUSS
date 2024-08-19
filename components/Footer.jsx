@@ -7,7 +7,7 @@ import { footerVariants } from '../utils/motion';
 
 const Footer = () => (
   <motion.footer
-    id="footer" 
+    id="footer"
     variants={footerVariants}
     initial="hidden"
     whileInView="show"
@@ -41,7 +41,7 @@ const Footer = () => (
                 />
                 {social.name === 'email' && (
                   <span className="font-semibold text-[14px] text-xl text-white opacity-50 ml-2">
-                    
+                    {/* Your content here */}
                   </span>
                 )}
               </a>

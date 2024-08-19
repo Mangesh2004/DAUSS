@@ -6,7 +6,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import styles from '../styles';
 import { navVariants } from '../utils/motion';
 
-export default function Navbar() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -29,6 +29,7 @@ export default function Navbar() {
 
         {/* Mobile menu button */}
         <button 
+          type="button"
           className="block md:hidden text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
@@ -45,7 +46,7 @@ export default function Navbar() {
             className="relative inline-block px-4 py-2 text-white rounded group cursor-pointer"
           >
             Explore
-            <span className="absolute left-0 bottom-0 w-full h-0 bg-white transition-all duration-300 group-hover:h-[2px]"></span>
+            <span className="absolute left-0 bottom-0 w-full h-0 bg-white transition-all duration-300 group-hover:h-[2px]" />
           </ScrollLink>
           <ScrollLink
             to="footer"
@@ -54,7 +55,7 @@ export default function Navbar() {
             className="relative inline-block px-4 py-2 text-white rounded group cursor-pointer"
           >
             Contact
-            <span className="absolute left-0 bottom-0 w-full h-0 bg-white transition-all duration-300 group-hover:h-[2px]"></span>
+            <span className="absolute left-0 bottom-0 w-full h-0 bg-white transition-all duration-300 group-hover:h-[2px]" />
           </ScrollLink>
           <ScrollLink
             to="about"
@@ -63,10 +64,12 @@ export default function Navbar() {
             className="relative inline-block px-4 py-2 text-white rounded group cursor-pointer"
           >
             About
-            <span className="absolute left-0 bottom-0 w-full h-0 bg-white transition-all duration-300 group-hover:h-[2px]"></span>
+            <span className="absolute left-0 bottom-0 w-full h-0 bg-white transition-all duration-300 group-hover:h-[2px]" />
           </ScrollLink>
         </div>
       </div>
     </motion.nav>
   );
-}
+};
+
+export default Navbar;

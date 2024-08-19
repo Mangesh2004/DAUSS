@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import PropTypes from 'prop-types'; // Import PropTypes for type checking
-import styles from '../styles';
 import { fadeIn } from '../utils/motion';
 
 const ExploreCard = ({ id, imgUrl, title, index, active, handleClick, link }) => (
@@ -27,7 +26,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick, link }) =>
         </h2>
         {link && (
           <Link href={link}>
-            <button className="mt-4 px-6 py-2 bg-purple-600 text-white rounded-md  transition">
+            <button type='submit' className="mt-4 px-6 py-2 bg-purple-600 text-white rounded-md  transition">
               Go to Page
             </button>
           </Link>
