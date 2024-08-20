@@ -17,6 +17,7 @@ const Navbar = () => {
       className={`${styles.xPaddings} py-8 relative`}
     >
       <div className={`${styles.innerWidth} mx-auto flex items-center justify-between`}>
+        <div className="feedback-gradient" />
         {/* Text Section */}
         <div className="flex flex-col">
           <h1 className="font-extrabold text-[30px] text-white leading-[30px] md:text-4xl">
@@ -28,7 +29,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu button */}
-        <button 
+        <button
           type="button"
           className="block md:hidden text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
@@ -49,21 +50,21 @@ const Navbar = () => {
             <span className="absolute left-0 bottom-0 w-full h-0 bg-white transition-all duration-300 group-hover:h-[2px]" />
           </ScrollLink>
           <ScrollLink
-            to="footer"
-            smooth
-            duration={500}
-            className="relative inline-block px-4 py-2 text-white rounded group cursor-pointer"
-          >
-            Contact
-            <span className="absolute left-0 bottom-0 w-full h-0 bg-white transition-all duration-300 group-hover:h-[2px]" />
-          </ScrollLink>
-          <ScrollLink
             to="about"
             smooth
             duration={500}
             className="relative inline-block px-4 py-2 text-white rounded group cursor-pointer"
           >
             About
+            <span className="absolute left-0 bottom-0 w-full h-0 bg-white transition-all duration-300 group-hover:h-[2px]" />
+          </ScrollLink>
+          <ScrollLink
+            to="footer"
+            smooth
+            duration={500}
+            className="relative inline-block px-4 py-2 text-white rounded group cursor-pointer"
+          >
+            Contact
             <span className="absolute left-0 bottom-0 w-full h-0 bg-white transition-all duration-300 group-hover:h-[2px]" />
           </ScrollLink>
         </div>

@@ -15,7 +15,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick, link }) =>
   >
     <img src={imgUrl} alt={title} className="absolute w-full h-full object-cover rounded-[24px]" />
 
-    { active !== id ? (
+    {active !== id ? (
       <h3 className="font-semibold sm:text-[26px] text-[18px] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
         {title}
       </h3>
@@ -26,7 +26,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick, link }) =>
         </h2>
         {link && (
           <Link href={link}>
-            <button type='submit' className="mt-4 px-6 py-2 bg-purple-600 text-white rounded-md  transition">
+            <button type="submit" className="mt-4 px-6 py-2 bg-purple-600 text-white rounded-md transition">
               Go to Page
             </button>
           </Link>

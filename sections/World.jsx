@@ -30,15 +30,15 @@ const World = () => {
       >
         <TypingText title="| Meet our members" textStyles="text-center" />
         <motion.div
-          className="relative mt-[69px] flex w-full h-[550px] overflow-hidden"
+          className="relative mt-[69px] flex w-full h-[750px] overflow-hidden rounded-[40px]" // Apply rounded corners to the container
         >
-          <div className="relative flex w-full h-full">
+          <div className="relative flex w-full h-full rounded-[40px] overflow-hidden"> {/* Ensure the container has rounded corners */}
             {images.map((src, index) => (
               <motion.img
                 key={index}
                 src={src}
                 alt={`image-${index}`}
-                className="absolute w-full h-full object-contain"
+                className="absolute w-full h-full object-cover rounded-[40px]" // Apply rounded corners to the image
                 initial={{ opacity: 0 }}
                 animate={{ opacity: index === currentImage ? 1 : 0 }}
                 transition={{ duration: 1 }} // Adjust duration for fade transition
