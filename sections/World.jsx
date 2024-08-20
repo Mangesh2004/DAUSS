@@ -6,7 +6,7 @@ import styles from '../styles';
 import { TitleText, TypingText } from '../components';
 import { staggerContainer, fadeIn } from '../utils/motion';
 
-const images = ['member1.jpg', 'member2.jpg', 'member3.jpg']; // Add your images here
+const images = ['abhishek.png', 'aditya.png', 'mankit.png','mangesh.png','harsh.png','neerad.png','sachi.png','srushti.png','vaishnavi.png','vedang.png']; // Add your images here
 
 const World = () => {
   const [currentImage, setCurrentImage] = useState(0);
